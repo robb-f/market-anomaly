@@ -4,4 +4,4 @@ seaborn
 scikit-learn
 shap
 imbalanced-learn
-openai
+gpt4all
