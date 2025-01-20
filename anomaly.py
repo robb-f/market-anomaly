@@ -73,7 +73,7 @@ def get_response(bot_input):
     with model.chat_session():
     	model.generate(bot_input, max_tokens=400)
     	output = model.current_chat_session[2]['content']
-    print (output)
+    print(output)
     
 def main():
     df = pd.read_csv("docs/data.csv")
@@ -85,8 +85,8 @@ def main():
     # AI Chatbot
     date = input('Please enter a date that you\'d like an investment explanation on as it appears in the docs/output.csv file: ')
     csv_data = search_csv('docs/output.csv', 'Data', date).to_string()
-    bot_input = f'''A Linear Regression ML model predicts anomalies in the market if probability > 0.5; otherwise, invest.
-                    Given {date} and the following data\n{csv_data}\n explain the investment strategy.
+    bot_input = f'''A Logistic Regression ML model predicts a crash in the market if Predicted_Class = 1 with probability Predicted_Prob.
+                    Given {date} and the following data\n{csv_data}\n, explain the investment strategy given the proposed action.
                     Make sure the explanation is concise, accessible, and actionable'''
     get_response(bot_input)
 
