@@ -12,8 +12,8 @@ option to have an investment strategy explained to them based on this [Qwen LLM]
 ## Usage
 You should clone this repository first.
 ```nushell
-    $ pip install -r requirements.txt
-    $ python3 anomaly.py
+$ pip install -r requirements.txt
+$ python3 anomaly.py
 ```
 On the first iteration, please allow approximately 5 minutes for the LLM to install locally. The LLM will take a little time to analyze
 the date you provide.
